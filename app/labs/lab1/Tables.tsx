@@ -2,7 +2,7 @@ export default function Tables() {
   return (
     <div>
       <h4>Quiz grades</h4>
-      <table border={1} cellPadding={5}>
+      <table id="wd-tables" border={1} cellPadding={5}>
         <thead>
           <tr><th>Quiz</th><th>Score</th></tr>
         </thead>

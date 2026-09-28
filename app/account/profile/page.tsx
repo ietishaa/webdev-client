@@ -1,6 +1,6 @@
 export default function Profile() {
   return (
-    <div>
+    <div id="wd-profile-screen">
       <h3>Profile</h3>
       <input defaultValue="Ietisha" /><br /><br />
       <button>Update</button>
