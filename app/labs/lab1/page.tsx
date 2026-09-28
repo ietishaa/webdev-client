@@ -26,9 +26,13 @@ export default function Lab1() {
       <hr />
       <Forms />
       <hr />
-      <HighlightedParagraph text="Sample highlighted text" color="yellow" />
+      <div id="wd-highlighted-paragraph">
+        <HighlightedParagraph text="Sample highlighted text" color="yellow" />
+      </div>
       <HighlightedParagraph text="My own highlighted sentence" color="lightgreen" />
-      <HighlightedBox color="orange"><p>My goals: finish A1, learn Next.js</p></HighlightedBox>
+      <div id="wd-highlighted-box">
+        <HighlightedBox color="orange"><p>My goals: finish A1, learn Next.js</p></HighlightedBox>
+      </div>
       <HighlightedBox color="purple"><p>Sample nested box</p><span>with nested tags</span></HighlightedBox>
     </div>
   );
