@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function Assignments() {
   return (
-    <div>
+    <div id="wd-assignments-editor">
       <h3>Assignments</h3>
       <ul>
         <li><Link href="/courses/1234/assignments/a1">A1 — HTML user interfaces</Link></li>

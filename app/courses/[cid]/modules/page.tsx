@@ -1,6 +1,6 @@
 export default function Modules() {
   return (
-    <div>
+    <div id="wd-modules">
       <h3>Modules</h3>
       <div>
         <h4>Week 1</h4>

@@ -7,7 +7,7 @@ export default function Dashboard() {
     { id: "9012", name: "Numerical Analysis" },
   ];
   return (
-    <div style={{ padding: 20 }}>
+    <div id="wd-dashboard" style={{ padding: 20 }}>
       <h2>Dashboard</h2>
       <div style={{ display: "flex", gap: 15 }}>
         {courses.map((c) => (

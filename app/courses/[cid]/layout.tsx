@@ -6,7 +6,7 @@ export default async function CourseLayout({
 }: { children: React.ReactNode; params: Promise<{ cid: string }> }) {
   const { cid } = await params;
   return (
-    <div style={{ display: "flex" }}>
+    <div  id="wd-courses-navigation" style={{ display: "flex" }}>
       <div style={{ width: 120, padding: 10, background: "#eee" }}>
         <Link href={`/courses/${cid}/home`}>Home</Link><br />
         <Link href={`/courses/${cid}/modules`}>Modules</Link><br />

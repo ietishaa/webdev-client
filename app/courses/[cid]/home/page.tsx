@@ -1,7 +1,7 @@
 export default function Home() {
   return (
-    <div>
-      <h3>Course Status</h3>
+    <div id="wd-home">
+      <div id="wd-course-status"></div><h3>Course Status</h3>
       <p>Enrolled — In Progress</p>
       <h3>Modules</h3>
       <div>

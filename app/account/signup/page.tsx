@@ -5,6 +5,6 @@ export default function SignUp() {
       <input placeholder="username" /><br /><br />
       <input placeholder="password" type="password" /><br /><br />
       <button>Sign up</button>
-    </>
+    </div>
   );
 }
