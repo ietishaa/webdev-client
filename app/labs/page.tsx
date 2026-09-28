@@ -3,7 +3,7 @@ import Link from "next/link";
 export default function Labs() {
   return (
     <div style={{ padding: 20 }}>
-      <h3>Ietisha Rathod </h3>
+      <h3>Ietisha Vinod Rathod </h3>
       <h2>Labs</h2>
       <ul>
         <li><a id="wd-toc-book-link" href="/book/ch1">Chapter 1</a></li>
