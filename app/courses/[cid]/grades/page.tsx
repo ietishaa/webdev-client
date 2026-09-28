@@ -1,0 +1,1 @@
+export default function Grades() { return <div><h3>Piazza</h3></div>; }

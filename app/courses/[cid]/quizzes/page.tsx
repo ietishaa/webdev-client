@@ -1,0 +1,1 @@
+export default function Quizzes() { return <div><h3>Piazza</h3></div>; }
