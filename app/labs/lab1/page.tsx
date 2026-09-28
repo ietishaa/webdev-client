@@ -3,6 +3,10 @@ import ParagraphTag from "./ParagraphTag";
 import ListTags from "./ListTags";
 import Tables from "./Tables";
 import AnchorTag from "./AnchorTag";
+import Images from "./Images";
+import Forms from "./Forms";
+import HighlightedParagraph from "./HighlightedParagraph";
+import HighlightedBox from "./HighlightedBox";
 
 export default function Lab1() {
   return (
@@ -17,6 +21,15 @@ export default function Lab1() {
       <Tables />
       <hr />
       <AnchorTag />
+      <hr />
+      <Images />
+      <hr />
+      <Forms />
+      <hr />
+      <HighlightedParagraph text="Sample highlighted text" color="yellow" />
+      <HighlightedParagraph text="My own highlighted sentence" color="lightgreen" />
+      <HighlightedBox color="orange"><p>My goals: finish A1, learn Next.js</p></HighlightedBox>
+      <HighlightedBox color="purple"><p>Sample nested box</p><span>with nested tags</span></HighlightedBox>
     </div>
   );
 }
