@@ -1,15 +1,24 @@
 import { AiOutlineDashboard } from "react-icons/ai";
-import { LiaBookSolid } from "react-icons/lia";
+import { LiaBookSolid, LiaCogSolid } from "react-icons/lia";
 import { FaRegCircleUser } from "react-icons/fa6";
 import Link from "next/link";
 
 export default function DashboardLayout({ children }: { children: React.ReactNode }) {
   return (
-    <div className="flex">
+    <div>
       <nav
         id="wd-kambaz-navigation"
-        className="fixed bottom-0 top-0 z-20 w-[120px] bg-black"
+        className="fixed bottom-0 top-0 z-20 hidden w-[120px] bg-black md:block"
       >
+        <a
+          href="https://www.northeastern.edu/"
+          id="wd-neu-link"
+          target="_blank"
+          rel="noreferrer"
+          className="block bg-black py-3 text-center text-white text-xs"
+        >
+          NEU
+        </a>
         <Link
           href="/account/profile"
           id="wd-account-link"
@@ -39,8 +48,17 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
           <br />
           GitHub
         </a>
+        <Link
+          href="/labs"
+          id="wd-labs-link"
+          className="block bg-black py-3 text-center text-sm text-white no-underline"
+        >
+          <LiaCogSolid className="inline-block text-3xl text-red-600" />
+          <br />
+          Labs
+        </Link>
       </nav>
-      <div className="flex-1 ml-[120px] p-3">{children}</div>
+      <div className="md:ml-[120px] p-3">{children}</div>
     </div>
   );
 }
