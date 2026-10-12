@@ -12,6 +12,7 @@ export default function Labs() {
         <li><Link href="/labs/lab3">Lab 3</Link></li>
         <li id="wd-lab4-link"><Link href="/labs/lab4">Lab 4</Link></li>
         <li><Link href="/labs/lab5">Lab 5</Link></li>
+        <li>Lab 2 — coming soon (A2 branch)</li>
         <li><a id="wd-github" href="https://github.com/ietishaa/webdev-client" target="_blank" rel="noreferrer">GitHub repo</a></li>
       </ul>
     </div>
