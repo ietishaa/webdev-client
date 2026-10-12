@@ -1,5 +1,7 @@
 import "./index.css";
 import ReactIconsSampler from "./ReactIconsSampler";
+import ForegroundColors from "./ForegroundColors";
+import BackgroundColors from "./BackgroundColors";
 
 export default function Lab2() {
   return (
@@ -13,16 +15,12 @@ export default function Lab2() {
       <p className="wd-class-demo">Class selector demo</p>
       <div className="wd-structure-demo"><p>Structural selector demo</p></div>
 
-      <div className="wd-color-demo">Color & background demo</div>
+     
       <div className="wd-border-demo">Border & corners demo</div>
       <div className="wd-box-model-demo">Box model demo</div>
 
-     <div className="wd-bg-colors-demo">
-        <div className="wd-bg-swatch-1">Named</div>
-        <div className="wd-bg-swatch-2">Hex</div>
-        <div className="wd-bg-swatch-3">RGB</div>
-        <div className="wd-bg-swatch-4">RGBA</div>
-     </div>
+      <ForegroundColors />
+      <BackgroundColors />
 
       <div className="wd-position-demo">Position demo</div>
       <div className="wd-absolute-demo">Absolute position demo</div>

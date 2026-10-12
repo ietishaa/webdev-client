@@ -24,3 +24,11 @@ div.wd-structure-demo p { color: crimson; }
   .wd-media-demo { background-color: pink; }
 }
 .wd-media-demo { background-color: lightgreen; padding: 10px; }
+
+.wd-fg-red { color: red; }
+.wd-fg-blue { color: blue; }
+.wd-fg-green { color: green; }
+
+.wd-bg-red { background-color: red; color: white; padding: 10px; }
+.wd-bg-blue { background-color: blue; color: white; padding: 10px; }
+.wd-bg-green { background-color: green; color: white; padding: 10px; }
