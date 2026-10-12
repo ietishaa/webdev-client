@@ -5,7 +5,7 @@ import BackgroundColors from "./BackgroundColors";
 
 export default function Lab2() {
   return (
-    <div style={{ padding: 20 }}>
+    <div id="wd-lab2" style={{ padding: 20 }}>
       <h2>Lab 2 — CSS & Tailwind</h2>
 
       <h4 style={{ color: "purple" }}>Inline style attribute practice</h4>

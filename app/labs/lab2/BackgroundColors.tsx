@@ -1,9 +1,19 @@
 export default function BackgroundColors() {
   return (
-    <div>
-      <div className="wd-bg-red">Red background</div>
-      <div className="wd-bg-blue">Blue background</div>
-      <div className="wd-bg-green">Green background</div>
+    <div id="wd-css-background-colors">
+      <h2 className="wd-bg-color-blue wd-fg-color-white">Background color</h2>
+      <p className="wd-bg-color-red wd-fg-color-black">
+        This background of this paragraph is red but{" "}
+        <span className="wd-bg-color-green wd-fg-color-white">
+          the background of this text is green and the foreground white
+        </span>
+      </p>
+      <p className="wd-bg-color-gray wd-fg-color-black">
+        This paragraph has a gray background with dark text for contrast.
+      </p>
+      <div id="wd-ai-bg" className="wd-bg-color-yellow wd-fg-color-black">
+        This sample block uses a yellow background with dark text for readability.
+      </div>
     </div>
   );
 }
