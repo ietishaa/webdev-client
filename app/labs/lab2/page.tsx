@@ -32,6 +32,11 @@ export default function Lab2() {
       <div className="wd-bg-colors-demo">Background colors sample</div>
       <div className="wd-absolute-demo">Absolute position demo</div>
       <div className="wd-fixed-demo">Fixed position demo</div>
+      <div className="wd-bg-colors-demo">
+        <div style={{ backgroundColor: "coral", padding: 10 }}>Coral</div>
+        <div style={{ backgroundColor: "teal", padding: 10, color: "white" }}>Teal</div>
+        <div style={{ backgroundColor: "gold", padding: 10 }}>Gold</div>
+      </div>
 
       <h4>React Icons</h4>
       <ReactIconsSampler />
