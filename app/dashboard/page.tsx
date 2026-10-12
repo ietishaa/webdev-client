@@ -1,35 +1,34 @@
-import Link from "next/link";
+import CourseCard from "./CourseCard";
 
 export default function Dashboard() {
-  const courses = [
-    { id: "1234", name: "Web Development" },
-    { id: "5678", name: "Algorithms" },
-    { id: "9012", name: "Numerical Analysis" },
-  ];
   return (
-    <div id="wd-dashboard" className="p-4">
-      <h2 className="text-2xl font-bold mb-4">Dashboard</h2>
+    <div id="wd-dashboard">
+      <h1 id="wd-dashboard-title">Dashboard</h1>
       <hr />
-      <h3 className="text-lg font-semibold my-3">Published Courses</h3>
-      <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 gap-8">
-        {courses.map((c) => (
-          <Link key={c.id} href={`/courses/${c.id}/home`} className="no-underline text-black">
-            <div className="border rounded-lg shadow-sm overflow-hidden h-full">
-              <div className="h-32 bg-gray-300 flex items-center justify-center text-sm text-gray-600">
-                Course image
-              </div>
-              <div className="p-3">
-                <h5 className="font-bold truncate">{c.name}</h5>
-                <p className="text-sm text-gray-500 line-clamp-2">
-                  Learn the fundamentals and apply them in projects.
-                </p>
-                <button className="mt-2 bg-blue-600 text-white text-sm px-3 py-1 rounded">
-                  Go
-                </button>
-              </div>
-            </div>
-          </Link>
-        ))}
+      <h2 id="wd-dashboard-published">Published Courses (3)</h2>
+      <hr />
+      <div
+        id="wd-dashboard-courses"
+        className="grid grid-cols-1 gap-8 sm:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4"
+      >
+        <CourseCard
+          id="1234"
+          title="Web Development"
+          subtitle="Full Stack software developer"
+          image="https://picsum.photos/seed/webdev/300/160"
+        />
+        <CourseCard
+          id="5678"
+          title="Algorithms"
+          subtitle="Design and analysis of algorithms"
+          image="https://picsum.photos/seed/algo/300/160"
+        />
+        <CourseCard
+          id="9012"
+          title="Numerical Analysis"
+          subtitle="Numerical methods and computation"
+          image="https://picsum.photos/seed/numanalysis/300/160"
+        />
       </div>
     </div>
   );
