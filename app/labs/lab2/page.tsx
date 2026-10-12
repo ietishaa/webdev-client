@@ -29,6 +29,9 @@ export default function Lab2() {
       <div className="wd-flex-demo"><div>A</div><div>B</div><div>C</div></div>
       <div className="wd-grid-demo"><div>1</div><div>2</div><div>3</div></div>
       <div className="wd-media-demo">Media query demo — resize window</div>
+      <div className="wd-bg-colors-demo">Background colors sample</div>
+      <div className="wd-absolute-demo">Absolute position demo</div>
+      <div className="wd-fixed-demo">Fixed position demo</div>
 
       <h4>React Icons</h4>
       <ReactIconsSampler />
