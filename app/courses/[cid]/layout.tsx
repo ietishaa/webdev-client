@@ -5,19 +5,21 @@ export default async function CourseLayout({
   params,
 }: { children: React.ReactNode; params: Promise<{ cid: string }> }) {
   const { cid } = await params;
+  const links = [
+    ["home", "Home"], ["modules", "Modules"], ["piazza", "Piazza"],
+    ["zoom", "Zoom"], ["quizzes", "Quizzes"], ["assignments", "Assignments"],
+    ["grades", "Grades"], ["people", "People"],
+  ];
   return (
-    <div  id="wd-courses-navigation" style={{ display: "flex" }}>
-      <div style={{ width: 120, padding: 10, background: "#eee" }}>
-        <Link href={`/courses/${cid}/home`}>Home</Link><br />
-        <Link href={`/courses/${cid}/modules`}>Modules</Link><br />
-        <Link href={`/courses/${cid}/piazza`}>Piazza</Link><br />
-        <Link href={`/courses/${cid}/zoom`}>Zoom</Link><br />
-        <Link href={`/courses/${cid}/quizzes`}>Quizzes</Link><br />
-        <Link href={`/courses/${cid}/assignments`}>Assignments</Link><br />
-        <Link href={`/courses/${cid}/grades`}>Grades</Link><br />
-        <Link href={`/courses/${cid}/people`}>People</Link>
+    <div className="flex">
+      <div id="wd-courses-navigation" className="flex flex-col w-32 bg-gray-100 border-r p-3 gap-2 text-sm">
+        {links.map(([href, label]) => (
+          <Link key={href} href={`/courses/${cid}/${href}`} className="hover:text-blue-600 hover:underline">
+            {label}
+          </Link>
+        ))}
       </div>
-      <div style={{ flex: 1, padding: 10 }}>{children}</div>
+      <div className="flex-1 p-4">{children}</div>
     </div>
   );
 }

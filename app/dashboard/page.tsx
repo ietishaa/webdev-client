@@ -7,12 +7,12 @@ export default function Dashboard() {
     { id: "9012", name: "Numerical Analysis" },
   ];
   return (
-    <div id="wd-dashboard" style={{ padding: 20 }}>
-      <h2>Dashboard</h2>
-      <div style={{ display: "flex", gap: 15 }}>
+    <div id="wd-dashboard" className="p-6">
+      <h2 className="text-2xl font-bold mb-4">Dashboard</h2>
+      <div className="flex flex-wrap gap-4">
         {courses.map((c) => (
           <Link key={c.id} href={`/courses/${c.id}/home`}>
-            <div style={{ border: "1px solid black", padding: 15, width: 150 }}>
+            <div className="border rounded-lg shadow-sm p-4 w-48 h-32 flex items-center justify-center text-center hover:shadow-md hover:bg-gray-50 transition">
               {c.name}
             </div>
           </Link>

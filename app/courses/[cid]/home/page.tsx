@@ -1,18 +1,15 @@
 export default function Home() {
   return (
-    <div id="wd-home">
-      <div id="wd-course-status"></div><h3>Course Status</h3>
-      <p>Enrolled — In Progress</p>
-      <h3>Modules</h3>
-      <div>
-        <h4>Week 1</h4>
-        <ul>
-          <li>Lesson 1 — Introduction<ul><li>Read chapter 1</li></ul></li>
-          <li>Lesson 2 — Setup<ul><li>Install Node.js</li></ul></li>
-        </ul>
-        <h4>Week 2</h4>
-        <ul>
-          <li>Lesson 1 — HTML basics<ul><li>Complete Lab 1</li></ul></li>
+    <div id="wd-home" className="space-y-4">
+      <div id="wd-course-status" className="bg-blue-50 border border-blue-200 rounded-lg p-4">
+        <h3 className="font-semibold mb-1">Course Status</h3>
+        <p className="text-green-700">Enrolled — In Progress</p>
+      </div>
+      <div className="border rounded-lg shadow-sm">
+        <div className="bg-gray-200 font-semibold p-2">Week 1</div>
+        <ul className="divide-y">
+          <li className="p-2">Lesson 1 — Introduction</li>
+          <li className="p-2">Lesson 2 — Setup</li>
         </ul>
       </div>
     </div>
