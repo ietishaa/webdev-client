@@ -7,14 +7,6 @@ export default function ForegroundColors() {
         The text in this paragraph is red but{" "}
         <span className="wd-fg-color-green">this text is green</span>
       </p>
-      <p className="wd-fg-color-blue">
-        I'm studying algorithms and{" "}
-        <span className="wd-fg-color-black">numerical analysis</span> this term.
-      </p>
-      <p id="wd-ai-fg" className="wd-fg-color-blue">
-        This sample sentence mixes{" "}
-        <span className="wd-fg-color-black">two foreground colors</span>.
-      </p>
     </div>
   );
 }
