@@ -1,80 +1,25 @@
-.wd-selector-demo {
-  color: darkblue;
-  font-weight: bold;
-}
-#wd-id-demo {
-  background-color: lightyellow;
-  padding: 10px;
-}
-.wd-class-demo {
-  border: 2px solid green;
-}
-div.wd-structure-demo p {
-  color: crimson;
-}
+.wd-selector-demo { color: darkblue; font-weight: bold; }
+#wd-id-demo { background-color: lightyellow; padding: 10px; }
+.wd-class-demo { border: 2px solid green; }
+div.wd-structure-demo p { color: crimson; }
 
-.wd-color-demo {
-  color: white;
-  background-color: teal;
-}
-.wd-border-demo {
-  border: 3px dashed orange;
-  border-radius: 12px;
-}
-.wd-box-model-demo {
-  margin: 20px;
-  padding: 15px;
-  border: 1px solid black;
-  width: 200px;
-  display: block;
-}
+.wd-color-demo { color: white; background-color: teal; }
+.wd-border-demo { border: 3px dashed orange; border-radius: 12px; }
+.wd-box-model-demo { margin: 20px; padding: 15px; border: 1px solid black; width: 200px; display: block; }
 
-.wd-position-demo {
-  position: relative;
-  top: 10px;
-  left: 10px;
-  z-index: 5;
-}
-.wd-float-demo {
-  float: left;
-  width: 100px;
-  height: 100px;
-  background: lightblue;
-}
-.wd-flex-demo {
-  display: flex;
-  justify-content: space-between;
-  gap: 10px;
-}
-.wd-grid-demo {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 8px;
-}
+.wd-bg-colors-demo { display: flex; gap: 10px; }
+.wd-bg-coral { background-color: coral; padding: 10px; }
+.wd-bg-teal { background-color: teal; color: white; padding: 10px; }
+.wd-bg-gold { background-color: gold; padding: 10px; }
+
+.wd-position-demo { position: relative; top: 10px; left: 10px; z-index: 5; }
+.wd-absolute-demo { position: absolute; top: 50px; left: 50px; }
+.wd-fixed-demo { position: fixed; bottom: 10px; right: 10px; background: black; color: white; padding: 6px; }
+.wd-float-demo { float: left; width: 100px; height: 100px; background: lightblue; }
+.wd-flex-demo { display: flex; justify-content: space-between; gap: 10px; }
+.wd-grid-demo { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; }
 
 @media (max-width: 600px) {
-  .wd-media-demo {
-    background-color: pink;
-  }
+  .wd-media-demo { background-color: pink; }
 }
-.wd-media-demo {
-  background-color: lightgreen;
-  padding: 10px;
-}
-.wd-bg-colors-demo {
-  background-color: coral;
-  padding: 12px;
-}
-.wd-absolute-demo {
-  position: absolute;
-  top: 50px;
-  left: 50px;
-}
-.wd-fixed-demo {
-  position: fixed;
-  bottom: 10px;
-  right: 10px;
-  background: black;
-  color: white;
-  padding: 6px;
-}
+.wd-media-demo { background-color: lightgreen; padding: 10px; }
