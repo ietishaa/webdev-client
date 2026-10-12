@@ -12,14 +12,24 @@ export default async function CourseLayout({
   ];
   return (
     <div className="flex">
-      <div id="wd-courses-navigation" className="flex flex-col w-32 bg-gray-100 border-r p-3 gap-2 text-sm">
-        {links.map(([href, label]) => (
-          <Link key={href} href={`/courses/${cid}/${href}`} className="hover:text-blue-600 hover:underline">
-            {label}
-          </Link>
-        ))}
+      <div
+        id="wd-courses-navigation"
+        className="hidden md:block fixed w-[140px] bg-white border-r"
+      >
+        <ul className="list-none p-0 m-0">
+          {links.map(([href, label]) => (
+            <li key={href} className="border-b">
+              <Link
+                href={`/courses/${cid}/${href}`}
+                className="block px-4 py-3 text-sm text-black no-underline hover:bg-gray-100 border-l-4 border-l-transparent hover:border-l-red-600"
+              >
+                {label}
+              </Link>
+            </li>
+          ))}
+        </ul>
       </div>
-      <div className="flex-1 p-4">{children}</div>
+      <div className="flex-1 md:ml-[140px] p-4">{children}</div>
     </div>
   );
 }
