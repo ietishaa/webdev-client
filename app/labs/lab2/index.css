@@ -8,9 +8,10 @@ div.wd-structure-demo p { color: crimson; }
 .wd-box-model-demo { margin: 20px; padding: 15px; border: 1px solid black; width: 200px; display: block; }
 
 .wd-bg-colors-demo { display: flex; gap: 10px; }
-.wd-bg-coral { background-color: coral; padding: 10px; }
-.wd-bg-teal { background-color: teal; color: white; padding: 10px; }
-.wd-bg-gold { background-color: gold; padding: 10px; }
+.wd-bg-swatch-1 { background-color: coral; width: 100px; height: 60px; display: flex; align-items: center; justify-content: center; color: white; }
+.wd-bg-swatch-2 { background-color: #2a9d8f; width: 100px; height: 60px; display: flex; align-items: center; justify-content: center; color: white; }
+.wd-bg-swatch-3 { background-color: rgb(233, 196, 106); width: 100px; height: 60px; display: flex; align-items: center; justify-content: center; }
+.wd-bg-swatch-4 { background-color: rgba(231, 111, 81, 0.8); width: 100px; height: 60px; display: flex; align-items: center; justify-content: center; color: white; }
 
 .wd-position-demo { position: relative; top: 10px; left: 10px; z-index: 5; }
 .wd-absolute-demo { position: absolute; top: 50px; left: 50px; }

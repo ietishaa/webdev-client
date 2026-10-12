@@ -17,11 +17,12 @@ export default function Lab2() {
       <div className="wd-border-demo">Border & corners demo</div>
       <div className="wd-box-model-demo">Box model demo</div>
 
-      <div className="wd-bg-colors-demo">
-        <div className="wd-bg-coral">Coral</div>
-        <div className="wd-bg-teal">Teal</div>
-        <div className="wd-bg-gold">Gold</div>
-      </div>
+     <div className="wd-bg-colors-demo">
+        <div className="wd-bg-swatch-1">Named</div>
+        <div className="wd-bg-swatch-2">Hex</div>
+        <div className="wd-bg-swatch-3">RGB</div>
+        <div className="wd-bg-swatch-4">RGBA</div>
+     </div>
 
       <div className="wd-position-demo">Position demo</div>
       <div className="wd-absolute-demo">Absolute position demo</div>
