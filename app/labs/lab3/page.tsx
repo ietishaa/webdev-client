@@ -2,10 +2,8 @@ import "./classes.css";
 import Link from "next/link";
 import Add from "./Add";
 import Pathname from "./Pathname";
-import ServerInfo from "./ServerInfo";
-import mathUtilsDefault from "./mathUtils";
-import * as mathUtilsNamespace from "./mathUtils";
-import { add } from "./mathUtils";
+import ServerComponentDemo from "./ServerComponentDemo";
+import DestructingImports from "./DestructingImports";
 import todosData from "./todos.json";
 
 type Todo = { id: number; text: string; done: boolean };
@@ -40,7 +38,7 @@ export default function Lab3() {
       <p>{`Hello, ${house.address}!`}</p>
 
       <h3>Arrow Functions</h3>
-      <p>{add(2, 3)} (using an arrow function from mathUtils)</p>
+      <p>{(() => 2 + 3)()} (an arrow function returning 2 + 3)</p>
 
       <h3>If Else</h3>
       <p>{hour1 < 12 ? "It is morning" : "It is not morning"}</p>
@@ -84,43 +82,7 @@ export default function Lab3() {
       <h3>JSON.stringify</h3>
       <pre>{JSON.stringify(house, null, 2)}</pre>
 
-      <h3>Destructuring Imports</h3>
-      <table border={1} cellPadding={6}>
-        <thead>
-          <tr>
-            <th>Style</th>
-            <th>Import statement</th>
-            <th>Result</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Default object</td>
-            <td>import mathUtils from &quot;./mathUtils&quot;</td>
-            <td>{mathUtilsDefault.add(2, 3)}</td>
-          </tr>
-          <tr>
-            <td>Namespace</td>
-            <td>import * as mathUtils from &quot;./mathUtils&quot;</td>
-            <td>{mathUtilsNamespace.default.add(2, 3)}</td>
-          </tr>
-          <tr>
-            <td>Named function</td>
-            <td>import {"{"} add {"}"} from &quot;./mathUtils&quot;</td>
-            <td>{add(2, 3)}</td>
-          </tr>
-          <tr>
-            <td>Named function (again)</td>
-            <td>add(4, 5)</td>
-            <td>{add(4, 5)}</td>
-          </tr>
-          <tr>
-            <td>add(10, 20)</td>
-            <td>add(10, 20)</td>
-            <td>{add(10, 20)} / {mathUtilsDefault.add(10, 20)} / {mathUtilsNamespace.add(10, 20)}</td>
-          </tr>
-        </tbody>
-      </table>
+      <DestructingImports />
 
       <h3>Classes</h3>
       <div className="wd-box-red">Red box</div>
@@ -138,7 +100,7 @@ export default function Lab3() {
 
       <h3>Client and Server Components</h3>
       <Pathname />
-      <ServerInfo />
+      <ServerComponentDemo />
 
       <h3>Components</h3>
       <Add a={5} b={7} />
