@@ -1,5 +1,6 @@
 [
   { "_id": "1234", "name": "Web Development", "number": "CS4550", "description": "Full stack software developer" },
   { "_id": "5678", "name": "Algorithms", "number": "CS5800", "description": "Design and analysis of algorithms" },
-  { "_id": "9012", "name": "Numerical Analysis", "number": "CS5620", "description": "Numerical methods and computation" }
-]   
+  { "_id": "9012", "name": "Numerical Analysis", "number": "CS5620", "description": "Numerical methods and computation" },
+  { "_id": "RS101", "name": "Rocket Science", "number": "RS101", "description": "Introduction to rocket propulsion" }
+]
