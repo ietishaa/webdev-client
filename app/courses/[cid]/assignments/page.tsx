@@ -1,32 +1,22 @@
 import Link from "next/link";
+import assignmentsData from "@/app/database/assignments.json";
 
-export default function Assignments() {
+export default async function Assignments({ params }: { params: Promise<{ cid: string }> }) {
+  const { cid } = await params;
+  const assignments = assignmentsData.filter((a) => a.course === cid);
   return (
     <div id="wd-assignments">
-      <div className="flex gap-2 mb-3">
-        <input
-          type="text"
-          placeholder="Search for Assignments"
-          className="border rounded px-3 py-2 flex-1 text-sm"
-        />
-        <button className="border px-3 py-2 rounded text-sm">+ Group</button>
-        <button className="bg-red-700 text-white px-3 py-2 rounded text-sm">+ Assignment</button>
-      </div>
       <div className="border rounded">
         <div className="bg-gray-100 font-semibold p-3">ASSIGNMENTS</div>
         <ul className="list-none p-0 m-0 divide-y">
-          <li className="p-3 border-l-4 border-l-green-500">
-            <Link href="/courses/1234/assignments/a1" className="font-medium no-underline text-black">
-              A1 — HTML user interfaces
-            </Link>
-            <p className="text-xs text-gray-500 m-0">Multiple Modules | Not available until... | Due date</p>
-          </li>
-          <li className="p-3 border-l-4 border-l-green-500">
-            <Link href="/courses/1234/assignments/a2" className="font-medium no-underline text-black">
-              A2 — CSS styling
-            </Link>
-            <p className="text-xs text-gray-500 m-0">Multiple Modules | Not available until... | Due date</p>
-          </li>
+          {assignments.map((a) => (
+            <li key={a._id} className="p-3 border-l-4 border-l-green-500">
+              <Link href={`/courses/${cid}/assignments/${a._id}`} className="font-medium no-underline text-black">
+                {a.title}
+              </Link>
+              <p className="text-xs text-gray-500 m-0">{a.points} pts</p>
+            </li>
+          ))}
         </ul>
       </div>
     </div>

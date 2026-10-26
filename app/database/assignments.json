@@ -1,0 +1,6 @@
+[
+  { "_id": "a1", "title": "A1 - HTML user interfaces", "course": "1234", "points": 125 },
+  { "_id": "a2", "title": "A2 - CSS styling", "course": "1234", "points": 83 },
+  { "_id": "a3", "title": "A3 - JavaScript", "course": "1234", "points": 100 },
+  { "_id": "b1", "title": "HW1 - Complexity Analysis", "course": "5678", "points": 100 }
+]

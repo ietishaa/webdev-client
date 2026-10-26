@@ -1,0 +1,4 @@
+[
+  { "_id": "u1", "firstName": "Ietisha", "lastName": "Rathod", "email": "rathod.ie@northeastern.edu", "role": "STUDENT" },
+  { "_id": "u2", "firstName": "John", "lastName": "Doe", "email": "doe.j@northeastern.edu", "role": "FACULTY" }
+]

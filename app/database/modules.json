@@ -1,0 +1,6 @@
+[
+  { "_id": "m101", "name": "Week 1 - Introduction", "course": "1234", "lessons": ["Intro", "Setup"] },
+  { "_id": "m102", "name": "Week 2 - HTML & CSS", "course": "1234", "lessons": ["HTML basics", "CSS basics"] },
+  { "_id": "m201", "name": "Week 1 - Sorting", "course": "5678", "lessons": ["Bubble sort", "Merge sort"] },
+  { "_id": "m202", "name": "Week 2 - Graphs", "course": "5678", "lessons": ["BFS", "DFS"] }
+]
