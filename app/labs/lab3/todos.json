@@ -1,0 +1,6 @@
+[
+  { "id": 1, "text": "Learn JavaScript", "done": true },
+  { "id": 2, "text": "Build Lab 3", "done": false },
+  { "id": 3, "text": "Submit A3", "done": false },
+  { "id": 4, "text": "Review feedback", "done": false }
+]
