@@ -1,22 +1,63 @@
+"use client";
 import CourseCard from "./CourseCard";
-import coursesData from "@/app/database/courses.json";
+import { useCourseStore } from "../useCourseStore";
 
 export default function Dashboard() {
+  const courses = useCourseStore((s) => s.courses);
+  const course = useCourseStore((s) => s.course);
+  const setCourse = useCourseStore((s) => s.setCourse);
+  const addCourse = useCourseStore((s) => s.addCourse);
+  const updateCourse = useCourseStore((s) => s.updateCourse);
+  const deleteCourse = useCourseStore((s) => s.deleteCourse);
+
   return (
     <div id="wd-dashboard">
       <h1 id="wd-dashboard-title">Dashboard</h1>
       <hr />
-      <h2 id="wd-dashboard-published">Published Courses ({coursesData.length})</h2>
+
+      <div id="wd-course-form">
+        <input
+          placeholder="Name"
+          value={course.name ?? ""}
+          onChange={(e) => setCourse({ name: e.target.value })}
+        />
+        <input
+          placeholder="Description"
+          value={course.description ?? ""}
+          onChange={(e) => setCourse({ description: e.target.value })}
+        />
+        <input
+          placeholder="Number"
+          value={course.number ?? ""}
+          onChange={(e) => setCourse({ number: e.target.value })}
+        />
+        <input
+          type="date"
+          value={course.startDate ?? ""}
+          onChange={(e) => setCourse({ startDate: e.target.value })}
+        />
+        <button id="wd-add-course-click" onClick={addCourse}>Add</button>
+        <button id="wd-update-course-click" onClick={updateCourse}>Update</button>
+      </div>
+
+      <h2 id="wd-dashboard-published">Published Courses ({courses.length})</h2>
       <hr />
       <div id="wd-dashboard-courses" className="grid grid-cols-1 gap-8 sm:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4">
-        {coursesData.map((c) => (
-          <CourseCard
-            key={c._id}
-            id={c._id}
-            title={c.name}
-            subtitle={c.description}
-            image={`https://picsum.photos/seed/${c._id}/300/160`}
-          />
+        {courses.map((c) => (
+          <div key={c._id} className="relative">
+            <CourseCard
+              id={c._id}
+              title={c.name}
+              subtitle={c.description}
+              image={`https://picsum.photos/seed/${c._id}/300/160`}
+            />
+            <button onClick={() => setCourse(c)} className="absolute top-2 right-14 text-xs bg-blue-600 text-white px-2 py-1 rounded">
+              Edit
+            </button>
+            <button onClick={() => deleteCourse(c._id)} className="absolute top-2 right-2 text-xs bg-red-600 text-white px-2 py-1 rounded">
+              Delete
+            </button>
+          </div>
         ))}
       </div>
     </div>
