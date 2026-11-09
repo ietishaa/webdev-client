@@ -1,4 +1,4 @@
 [
-  { "_id": "u1", "firstName": "Ietisha", "lastName": "Rathod", "email": "rathod.ie@northeastern.edu", "role": "STUDENT" },
-  { "_id": "u2", "firstName": "John", "lastName": "Doe", "email": "doe.j@northeastern.edu", "role": "FACULTY" }
+  { "_id": "u1", "username": "iron_man", "password": "stark123", "firstName": "Ietisha", "lastName": "Rathod", "email": "rathod.ie@northeastern.edu", "role": "STUDENT" },
+  { "_id": "u2", "username": "cap", "password": "america1", "firstName": "John", "lastName": "Doe", "email": "doe.j@northeastern.edu", "role": "FACULTY" }
 ]

@@ -16,26 +16,10 @@ export default function Dashboard() {
       <hr />
 
       <div id="wd-course-form">
-        <input
-          placeholder="Name"
-          value={course.name ?? ""}
-          onChange={(e) => setCourse({ name: e.target.value })}
-        />
-        <input
-          placeholder="Description"
-          value={course.description ?? ""}
-          onChange={(e) => setCourse({ description: e.target.value })}
-        />
-        <input
-          placeholder="Number"
-          value={course.number ?? ""}
-          onChange={(e) => setCourse({ number: e.target.value })}
-        />
-        <input
-          type="date"
-          value={course.startDate ?? ""}
-          onChange={(e) => setCourse({ startDate: e.target.value })}
-        />
+        <input placeholder="Name" value={course.name ?? ""} onChange={(e) => setCourse({ name: e.target.value })} />
+        <input placeholder="Description" value={course.description ?? ""} onChange={(e) => setCourse({ description: e.target.value })} />
+        <input placeholder="Number" value={course.number ?? ""} onChange={(e) => setCourse({ number: e.target.value })} />
+        <input type="date" value={course.startDate ?? ""} onChange={(e) => setCourse({ startDate: e.target.value })} />
         <button id="wd-add-course-click" onClick={addCourse}>Add</button>
         <button id="wd-update-course-click" onClick={updateCourse}>Update</button>
       </div>
@@ -44,20 +28,13 @@ export default function Dashboard() {
       <hr />
       <div id="wd-dashboard-courses" className="grid grid-cols-1 gap-8 sm:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4">
         {courses.map((c) => (
-          <div key={c._id} className="relative">
-            <CourseCard
-              id={c._id}
-              title={c.name}
-              subtitle={c.description}
-              image={`https://picsum.photos/seed/${c._id}/300/160`}
-            />
-            <button onClick={() => setCourse(c)} className="absolute top-2 right-14 text-xs bg-blue-600 text-white px-2 py-1 rounded">
-              Edit
-            </button>
-            <button onClick={() => deleteCourse(c._id)} className="absolute top-2 right-2 text-xs bg-red-600 text-white px-2 py-1 rounded">
-              Delete
-            </button>
-          </div>
+          <CourseCard
+            key={c._id}
+            course={c}
+            onEdit={() => setCourse(c)}
+            onDelete={() => deleteCourse(c._id)}
+            image={`https://picsum.photos/seed/${c._id}/300/160`}
+          />
         ))}
       </div>
     </div>
