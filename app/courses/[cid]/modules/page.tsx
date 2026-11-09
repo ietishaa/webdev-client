@@ -1,14 +1,17 @@
 "use client";
-import { useState } from "react";
+import { useState, use } from "react";
 import modulesData from "@/app/database/modules.json";
-import { use } from "react";
+import ModulesControls from "./ModulesControls";
+import ModuleControlButtons from "./ModuleControlButtons";
 
 export default function Modules({ params }: { params: Promise<{ cid: string }> }) {
   const { cid } = use(params);
   const [modules, setModules] = useState(modulesData.filter((m) => m.course === cid));
+  const [moduleName, setModuleName] = useState("");
 
   const addModule = () => {
-    setModules([...modules, { _id: `m${Date.now()}`, name: "New Module", course: cid, lessons: [] }]);
+    setModules([...modules, { _id: `m${Date.now()}`, name: moduleName, course: cid, lessons: [] }]);
+    setModuleName("");
   };
   const deleteModule = (id: string) => setModules(modules.filter((m) => m._id !== id));
   const editModule = (id: string) => {
@@ -18,18 +21,13 @@ export default function Modules({ params }: { params: Promise<{ cid: string }> }
 
   return (
     <div id="wd-modules">
-      <button id="wd-add-module-click" onClick={addModule} className="mb-3 bg-red-700 text-white px-3 py-1 rounded text-sm">
-        + Module
-      </button>
+      <ModulesControls moduleName={moduleName} setModuleName={setModuleName} addModule={addModule} />
       <ul className="list-none p-0 m-0 space-y-4">
         {modules.map((m) => (
           <li key={m._id} className="border border-gray-300 rounded">
             <div className="bg-gray-200 font-semibold p-3 border-l-4 border-l-green-600 flex justify-between items-center">
               {m.name}
-              <span>
-                <button onClick={() => editModule(m._id)} title="Edit" className="mr-2">✏️</button>
-                <button onClick={() => deleteModule(m._id)} title="Delete">🗑️</button>
-              </span>
+              <ModuleControlButtons moduleId={m._id} deleteModule={deleteModule} editModule={editModule} />
             </div>
             <ul className="list-none p-0 m-0 divide-y">
               {m.lessons.map((l) => (

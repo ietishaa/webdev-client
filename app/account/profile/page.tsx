@@ -5,15 +5,18 @@ import { useAccountContext, type User } from "@/app/AccountContext";
 
 export default function Profile() {
   const [profile, setProfile] = useState<User | null>(null);
+  const [checked, setChecked] = useState(false);
   const { currentUser, setCurrentUser } = useAccountContext();
   const router = useRouter();
 
   useEffect(() => {
     if (!currentUser) {
       router.push("/account/signin");
+      setChecked(true);
       return;
     }
     setProfile(currentUser);
+    setChecked(true);
   }, [currentUser, router]);
 
   const signout = () => {
@@ -21,7 +24,7 @@ export default function Profile() {
     router.push("/account/signin");
   };
 
-  if (!profile) return null;
+  if (!checked || !profile) return null;
 
   return (
     <div id="wd-profile-screen" className="max-w-sm space-y-3">
