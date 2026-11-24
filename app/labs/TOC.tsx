@@ -8,6 +8,8 @@ export default function TOC() {
     { href: "/labs/lab1", label: "Lab 1" },
     { href: "/labs/lab2", label: "Lab 2" },
     { href: "/labs/lab3", label: "Lab 3" },
+    { href: "/labs/lab4", label: "Lab 4" },
+    { href: "/labs/lab5", label: "Lab 5" },
   ];
   return (
     <ul style={{ listStyle: "none", padding: 0 }}>

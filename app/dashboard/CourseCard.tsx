@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-type Course = { _id: string; name: string; number: string; description: string };
+type Course = { _id: string; name: string; number?: string; description?: string };
 
 export default function CourseCard({
   course,
@@ -20,7 +20,7 @@ export default function CourseCard({
         <img src={image} width={300} height={160} alt={course.name} className="h-40 w-full object-cover" />
         <div className="p-4">
           <h5 className="wd-dashboard-course-title m-0 mb-2 truncate text-lg font-semibold whitespace-nowrap">{course.name}</h5>
-          <p className="wd-dashboard-course-description m-0 mb-3 h-[100px] overflow-hidden text-sm text-neutral-600">{course.description}</p>
+          <p className="wd-dashboard-course-description m-0 mb-3 h-[100px] overflow-hidden text-sm text-neutral-600">{course.description ?? ""}</p>
           <button type="button" className="inline-flex items-center justify-center rounded bg-blue-600 px-3 py-1.5 text-sm font-medium text-white">
             Go
           </button>

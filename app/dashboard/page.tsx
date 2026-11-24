@@ -1,4 +1,5 @@
 "use client";
+import { useEffect } from "react";
 import CourseCard from "./CourseCard";
 import { useCourseStore } from "../useCourseStore";
 
@@ -9,6 +10,11 @@ export default function Dashboard() {
   const addCourse = useCourseStore((s) => s.addCourse);
   const updateCourse = useCourseStore((s) => s.updateCourse);
   const deleteCourse = useCourseStore((s) => s.deleteCourse);
+  const fetchCourses = useCourseStore((s) => s.fetchCourses);
+
+  useEffect(() => {
+    fetchCourses();
+  }, [fetchCourses]);
 
   return (
     <div id="wd-dashboard">

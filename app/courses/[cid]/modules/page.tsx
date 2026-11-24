@@ -1,13 +1,22 @@
 "use client";
-import { useState, use } from "react";
-import modulesData from "@/app/database/modules.json";
+import { useState, useEffect, use } from "react";
 import ModulesControls from "./ModulesControls";
 import ModuleControlButtons from "./ModuleControlButtons";
 
+type Module = { _id: string; name: string; course: string; lessons?: string[] };
+
 export default function Modules({ params }: { params: Promise<{ cid: string }> }) {
   const { cid } = use(params);
-  const [modules, setModules] = useState(modulesData.filter((m) => m.course === cid));
+  const [modules, setModules] = useState<Module[]>([]);
   const [moduleName, setModuleName] = useState("");
+
+  useEffect(() => {
+    const server = process.env.NEXT_PUBLIC_HTTP_SERVER;
+    fetch(`${server}/api/courses/${cid}/modules`, { cache: "no-store" })
+      .then((r) => r.json())
+      .then((data) => setModules(data))
+      .catch(() => setModules([]));
+  }, [cid]);
 
   const addModule = () => {
     setModules([...modules, { _id: `m${Date.now()}`, name: moduleName, course: cid, lessons: [] }]);
@@ -30,7 +39,7 @@ export default function Modules({ params }: { params: Promise<{ cid: string }> }
               <ModuleControlButtons moduleId={m._id} deleteModule={deleteModule} editModule={editModule} />
             </div>
             <ul className="list-none p-0 m-0 divide-y">
-              {m.lessons.map((l) => (
+              {(m.lessons ?? []).map((l) => (
                 <li key={l} className="p-3 border-l-4 border-l-green-500">{l}</li>
               ))}
             </ul>
